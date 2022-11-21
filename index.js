@@ -1,13 +1,15 @@
 // Your code here
-function moveDodgerleft(){
-  const leftNumbers = dodger.style.replace("px", "");
-  const left =perseInt(leftNumbers,10);
-  if (left>0) {
-    dodger.style.left= '${left -1'}
+function moveDodgerLeft() {
+  const leftNumbers = dodger.style.left.replace("px", "");
+  const left = parseInt(leftNumbers, 10);
+
+  if (left > 0) {
+    dodger.style.left = `${left - 1}px`;
+  }
 }
-document.addEventListener("keydown", function(e){
-  if (e.key=== "arrowleft") {
-    moveDodgerleft();
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") {
+    moveDodgerLeft();
   }
 });
 function moveDodgerRight()
@@ -16,7 +18,7 @@ function moveDodgerRight()
   const right = parseInt( rightNumbers,10);
   if ( right>0)
   {
-    dodger.style.left= '${right +1}px';
+    dodger.style.left= `${right +1}px`;
   }
 
 
@@ -25,4 +27,4 @@ document.addEventListener("keydown", function(e)
 {
 if (e.key==="ArrowRight")
 { moveDodgerRight()}
-})
+});
